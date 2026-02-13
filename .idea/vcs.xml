@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/05-02-2026-thursday" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/06-02-2026-friday" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/09-02-2026-monday" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/09-02-2026-monday/fastapi__" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/11-02-2026-wednesday" vcs="Git" />
+  </component>
+</project>

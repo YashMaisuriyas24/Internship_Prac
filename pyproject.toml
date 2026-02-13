@@ -1,0 +1,26 @@
+[project]
+name = "internshippractice"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "YashMaisuriyas24",email = "yashmaisuriyas04@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "flask (>=3.1.2,<4.0.0)",
+    "fastapi (>=0.129.0,<0.130.0)",
+    "pymongo (>=4.16.0,<5.0.0)",
+    "pyodbc (>=5.3.0,<6.0.0)",
+    "sqlalchemy (>=2.0.46,<3.0.0)",
+    "numpy (>=2.4.2,<3.0.0)",
+    "pandas (>=3.0.0,<4.0.0)",
+    "uvicorn (>=0.40.0,<0.41.0)",
+    "requests (>=2.32.5,<3.0.0)",
+    "bs4 (>=0.0.2,<0.0.3)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
