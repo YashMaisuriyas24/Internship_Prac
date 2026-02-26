@@ -37,7 +37,6 @@ class RandomForestRegression:
         print(self.df.describe())
         print("--" * 70)
 
-
     # Preprocessing
     def preprocess(self):
         print("--" * 70)
