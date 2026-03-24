@@ -6,7 +6,7 @@ authors = [
     {name = "YashMaisuriyas24",email = "yashmaisuriyas04@gmail.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.13,<3.15"
 dependencies = [
     "flask (>=3.1.2,<4.0.0)",
     "fastapi (>=0.129.0,<0.130.0)",
@@ -14,7 +14,7 @@ dependencies = [
     "pyodbc (>=5.3.0,<6.0.0)",
     "sqlalchemy (>=2.0.46,<3.0.0)",
     "numpy (>=2.4.2,<3.0.0)",
-    "pandas (>=3.0.0,<4.0.0)",
+    "pandas (>=1.4.0,<3)",
     "uvicorn (>=0.40.0,<0.41.0)",
     "requests (>=2.32.5,<3.0.0)",
     "bs4 (>=0.0.2,<0.0.3)",
@@ -23,7 +23,15 @@ dependencies = [
     "matplotlib (>=3.10.8,<4.0.0)",
     "seaborn (>=0.13.2,<0.14.0)",
     "mlxtend (>=0.24.0,<0.25.0)",
-    "tensorflow (>=2.21.0,<3.0.0)"
+    "tensorflow (>=2.21.0,<3.0.0)",
+    "langchain (>=1.2.13,<2.0.0)",
+    "langchain-ollama (>=1.0.1,<2.0.0)",
+    "langchain-community (>=0.4.1,<0.5.0)",
+    "langchain-groq (>=1.1.2,<2.0.0)",
+    "tavily (>=1.1.0,<2.0.0)",
+    "langchain-tavily (>=0.2.17,<0.3.0)",
+    "python-dotenv (>=1.2.2,<2.0.0)",
+    "streamlit (>=1.55.0,<2.0.0)"
 ]
 
 
