@@ -36,7 +36,6 @@ result = model.invoke(query)
 tool_call = result.tool_calls[0]
 
 search_results = internet_search.invoke(tool_call["args"])
-
 tool_message = ToolMessage(
     content = str(search_results),
     tool_call_id = tool_call["id"]
