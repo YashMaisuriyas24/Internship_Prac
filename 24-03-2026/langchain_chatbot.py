@@ -9,7 +9,7 @@ import streamlit as st
 load_dotenv()
 
 # 1. PAGE CONFIGURATION
-st.set_page_config(page_title="Pro Search AI", page_icon="🌐", layout="wide")
+st.set_page_config(page_title="Pro Search AI", page_icon="", layout="wide")
 
 # 2. CUSTOM CSS FOR A MODERN LOOK
 st.markdown("""
@@ -17,7 +17,7 @@ st.markdown("""
         .main { background-color: #0e1117; }
         .stChatMessage { border: 1px solid #30363d; border-radius: 10px; padding: 10px; margin-bottom: 15px; }
         .stMarkdown p { font-size: 1.1rem; color: #e6edf3; }
-        div[data-testid="stToolbar"] { visibility: hidden; }
+        div[data-test-id="stToolbar"] { visibility: hidden; }
     </style>
 """, unsafe_allow_html=True)
 
@@ -27,7 +27,7 @@ with st.sidebar:
     st.divider()
     model_name = st.selectbox("Choose Model", ["llama-3.3-70b-versatile", "llama3-8b-8192"])
     temp = st.slider("Creativity (Temperature)", 0.0, 1.0, 0.3)
-    if st.button("🗑️ Clear Chat History", use_container_width=True):
+    if st.button(" Clear Chat History", use_container_width=True):
         st.session_state.messages = []
         st.rerun()
     st.info("Powered by **Groq** and **Tavily**")
@@ -55,17 +55,17 @@ st.caption("Ask me anything — I'll browse the web for the latest updates.")
 # Show previous messages
 for msg in st.session_state.messages:
     if isinstance(msg, HumanMessage):
-        st.chat_message("user", avatar="👤").write(msg.content)
+        st.chat_message("user", avatar="").write(msg.content)
     elif isinstance(msg, AIMessage) and msg.content:
-        st.chat_message("assistant", avatar="🤖").write(msg.content)
+        st.chat_message("assistant", avatar="").write(msg.content)
 
 # 7. CHAT LOGIC
 if prompt := st.chat_input("What would you like to know?"):
     # Show user message
-    st.chat_message("user", avatar="👤").write(prompt)
+    st.chat_message("user", avatar="").write(prompt)
     st.session_state.messages.append(HumanMessage(content=prompt))
 
-    with st.chat_message("assistant", avatar="🤖"):
+    with st.chat_message("assistant", avatar=""):
         # We use a container to show progress clearly
         status_placeholder = st.empty()
 
@@ -77,7 +77,7 @@ if prompt := st.chat_input("What would you like to know?"):
             # Step 2: If the AI wants to search
             if response.tool_calls:
                 for tool_call in response.tool_calls:
-                    status_placeholder.status(f"🔍 Searching for: {tool_call['args']['user_query']}")
+                    status_placeholder.status(f" Searching for: {tool_call['args']['user_query']}")
 
                     search_results = internet_search.invoke(tool_call["args"])
                     tool_msg = ToolMessage(content=str(search_results), tool_call_id=tool_call["id"])
