@@ -41,7 +41,6 @@ chain = prompt | llm
 
 
 def get_messages_history(session_id: str):
-    # 1. Connect to Long-term Storage (MongoDB)
     history = MongoDBChatMessageHistory(
         connection_string=MONGO_URI,
         session_id=session_id,
