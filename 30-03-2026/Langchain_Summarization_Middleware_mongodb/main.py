@@ -53,7 +53,6 @@ agent = create_agent(
     ]
 )
 
-
 def update_long_term(local_messages):
     if len(local_messages) > 8:
         old = local_messages[:-8]
