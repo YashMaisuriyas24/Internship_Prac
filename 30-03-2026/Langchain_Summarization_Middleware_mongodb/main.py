@@ -47,8 +47,8 @@ agent = create_agent(
     middleware=[
         SummarizationMiddleware(
             model=llm,
-            trigger=("messages", 4),  # summarize if >4 messages
-            keep=("messages", 4),     # keep last 4 exchanges in full
+            trigger=("messages", 4),
+            keep=("messages", 4),
         )
     ]
 )
@@ -69,7 +69,7 @@ def search_long_term(query):
 
 def chat():
     thread_id = "rag_thread_1"
-    local_messages = [SystemMessage(content=SYSTEM_PROMPT)]  # Start with system prompt
+    local_messages = [SystemMessage(content=SYSTEM_PROMPT)] 
 
     while True:
         user_input = input("\nYou: ")
