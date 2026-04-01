@@ -47,5 +47,4 @@ while True:
         break
     inputs = {"messages": [HumanMessage(content=user_input)]}
     result = agent.invoke(inputs,config = config)
-
     print(f"\nFinal Agent Response: {result['messages'][-1].content}")
