@@ -41,6 +41,5 @@ result = agent.invoke(
         ]
     }
 )
-
 for msg in result["messages"]:
     print(f"\n{msg.type.upper()} : {msg.content}")
