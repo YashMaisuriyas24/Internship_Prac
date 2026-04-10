@@ -9,7 +9,7 @@ collection = client["chatdb"]["history"]
 collection.insert_one(
 
     {
-        "message": "hello world"
+        "message": "Database Connectivity"
     }
 )
 
